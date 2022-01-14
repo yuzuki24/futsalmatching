@@ -161,7 +161,7 @@ def add(request):
     # メッセージを設定
     messages.success(request, add_user.username + ' を追加しました！\
         groupページに移動して、追加したFriendをメンバーに設定して下さい。')
-    return redirect(to='/sns')
+    return redirect(to='/vamos')
 
 # グループの作成処理
 
