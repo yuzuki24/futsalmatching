@@ -1,10 +1,11 @@
 @charset "UTF-8";
-.bg-img{
+.bg-img {
     background-image: url("https://thumb.photo-ac.com/66/663bac1a3bfa2efea392872bd67ee299_t.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-h1.display-4{
+
+h1.display-4 {
     font-family: 'Qwigley', cursive;
     font-size: 150px;
 }

@@ -1,6 +1,11 @@
 @charset "UTF-8";
-.bg-img{
-    background-image: url("static/media/photo0000-0331.jpg" );
+body {
+    width: 100%;
+}
+
+.bg-img {
+    background-image: url("static/media/photo0000-0331.jpg");
     background-size: cover;
     background-position: center 60%;
+    width: auto;
 }

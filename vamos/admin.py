@@ -5,5 +5,3 @@ admin.site.register(Message)
 admin.site.register(Friend)
 admin.site.register(Group)
 admin.site.register(Good)
-
-# Register your models here.
