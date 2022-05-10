@@ -1,11 +1,37 @@
-@charset "UTF-8";
-.bg-img {
-    background-image: url("https://thumb.photo-ac.com/66/663bac1a3bfa2efea392872bd67ee299_t.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-h1.display-4 {
-    font-family: 'Qwigley', cursive;
-    font-size: 150px;
-}
+    @charset "UTF-8";
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .bg-img {
+        background-image: url("https://png.pngtree.com/png-vector/20190727/ourlarge/pngtree-continuous-line-drawing-of-person-kicking-a-ball-football-sport-minimalist-png-image_1636886.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        min-height: 100vh;
+    }
+    
+    h1.display-4 {
+        font-family: 'Qwigley', cursive;
+        font-size: 150px;
+    }
+    
+    .loginuser {
+        margin-left: 800px;
+    }
+    
+    .navbar {
+        background-color: #00a960;
+    }
+    
+    .table {
+        background-color: rgba(19, 235, 37, 0.634);
+    }
+    
+    .nav-item {
+        margin-left: 8%;
+        margin-top: 2%;
+        font-size: large;
+    }

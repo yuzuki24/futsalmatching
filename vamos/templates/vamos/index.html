@@ -20,8 +20,8 @@ function sendGroupForm(page) {
     document.group_form.submit();
 }
 </script>
-<h1 class="display-4">Vamos!!</h1>
-<p>各チーム情報</p>
+<h1 class="display-4" style="text-shadow: 0.1em 0.1em 0.15em #00a960">Vamos!!</h1>
+<p>コミュニティ</p>
 {% if messages %}
 <ul class="messages">
     {% for message in messages %}
@@ -57,16 +57,18 @@ function sendGroupForm(page) {
     {% if item.share_id > 0 %}
     <ul><li class="text-black-50">"{{item.get_share}}"</li></ul>
     {% endif %}
-    <span class="float-left text-info">
-        share={{item.share_count}} good={{item.good_count}}
-    </span>
+
     <span class="float-right">
-        "{{item.owner}}"(<a href="{% url 'add' %}?name={{item.owner}}">
-            add friend</a>)
+        【<i class="fa fa-user"></i>{{item.owner}}】<a href="{% url 'add' %}?name={{item.owner}}"><button type="button" class="btn btn-light btn-sm"><i class="fa fa-user-plus"></i>
+            フレンドに追加</button></a>
         <a href="{% url 'share' item.id %}">
-            <button class="py-0">share</button></a>
+            <button type="button" class="btn btn-primary">share={{item.share_count}}</button></a>
         <a href="{% url 'good' item.id %}">
-            <button class="py-0">good!</button></a>
+            <button type="button" class="btn btn-primary">good!={{item.good_count}}</button></a>
+        <a href="https://twitter.com/share?url=http://127.0.0.1:8000/detail/1/" target="_blank" rel="nofollow">
+            <i class="fab fa-twitter-square fa-2x"></i></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/detail/1/" target="_blank" rel="nofollow">
+            <i class="fab fa-facebook-square fa-2x"></i></a>
     </span>
 </td></tr>
 {% endfor %}
@@ -76,19 +78,19 @@ function sendGroupForm(page) {
     {% if contents.has_previous %}
     <li class="page-item">
         <a class="page-link" href="javascript:sendGroupForm(1);">
-            &laquo; first</a>
+            &laquo; 最初へ</a>
     </li>
     <li class="page-item">
         <a class="page-link"
         href="javascript:sendGroupForm({{contents.previous_page_number}});">
-            &laquo; prev</a>
+            &laquo; 前へ</a>
     </li>
     {% else %}
     <li class="page-item">
-        <a class="page-link">&laquo; first</a>
+        <a class="page-link">&laquo; 最初へ</a>
     </li>
     <li class="page-item">
-        <a class="page-link">&laquo; prev</a>
+        <a class="page-link">&laquo; 前へ</a>
     </li>
     {% endif %}
     <li class="page-item">
@@ -99,21 +101,20 @@ function sendGroupForm(page) {
     <li class="page-item">
         <a class="page-link"
         href="javascript:sendGroupForm({{contents.next_page_number }});">
-            next &raquo;</a>
+            次へ &raquo;</a>
     </li>
     <li class="page-item">
         <a class="page-link"
         href="javascript:sendGroupForm({{contents.paginator.num_pages}});">
-            last &raquo;</a>
+            最後へ &raquo;</a>
     </li>
     {% else %}
     <li class="page-item">
-        <a class="page-link">next &raquo;</a>
+        <a class="page-link">次へ &raquo;</a>
     </li>
     <li class="page-item">
-        <a class="page-link">last &raquo;</a>
+        <a class="page-link">最後へ &raquo;</a>
     </li>
     {% endif %}
 </ul>
 {% endblock %}
-
